@@ -1,7 +1,7 @@
 syntax enable
 set backspace=indent,eol,start				"Make backspace like others editor, indent, end of the line, start
 
-source $HOME\AppData\Local\nvim\Plugins.vim
+source /home/florent/.config/nvim/Plugins.vim
 
 "-------------Visuals-----------"
 colorscheme dracula
@@ -27,12 +27,12 @@ set incsearch
 
 
 "-------------Mappings-----------"
-let mapleader = ","						"Default leader for commands
-map <leader>ev :tabedit $MYVIMRC<cr>				"VIMRC Shortcut
-map <leader>ep :e $HOME\AppData\Local\nvim\Plugins.vim<cr>	"Edit Plugins shortcut
-nmap <leader><space> :nohlsearch<cr>				"Remove the search Highlight
-nmap <C-T> :NERDTreeToggle<cr>					"NerdTree
-nmap <leader>www :cd D:\Boulot\www\<cr>				"Open www directory 
+let mapleader = ","							"Default leader for commands
+map <leader>ev :tabedit $MYVIMRC<cr>					"VIMRC Shortcut
+map <leader>ep :e /home/florent/.config/nvim/Plugins.vim<cr>		"Edit Plugins shortcut
+nmap <leader><space> :nohlsearch<cr>					"Remove the search Highlight
+nmap <C-T> :NERDTreeToggle<cr>						"NerdTree
+nmap <leader>www :cd /mnt/d/boulot/www/<cr>				"Open www directory 
 nnoremap <C-P> :Telescope find_files theme=dropdown<cr>
 
 

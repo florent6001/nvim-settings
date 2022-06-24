@@ -2,8 +2,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=$HOME/AppData/Local/nvim/bundle/Vundle.vim/
-call vundle#begin('$HOME/AppData/Local/nvim/bundle/')
+set rtp+=/home/florent/.config/nvim/bundle/Vundle.vim/
+call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-vinegar'
