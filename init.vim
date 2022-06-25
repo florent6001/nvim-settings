@@ -10,6 +10,7 @@ set number						"Activate line number
 set linespace=10					"Space between every lines (don't work on terminal)
 set t_CO=256						"Force 256 colors, useful for terminal
 set guioptions-=e					"Remove guitabs
+let g:airline_theme='deus'
 
 " Remove Left and Right Scrollbar
 set guioptions-=l

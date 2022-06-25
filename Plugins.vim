@@ -10,6 +10,9 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'dracula/vim'
 Plugin 'preservim/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
