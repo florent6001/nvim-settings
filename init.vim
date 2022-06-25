@@ -19,6 +19,11 @@ set guioptions-=r
 set guioptions-=R
 
 
+"----------NeoMake-------------"
+call neomake#configure#automake('nw', 750)
+let g:neomake_open_list = 2
+
+
 
 "---------Php CS Fixer---------"
 let g:php_cs_fixer_path = "~/php-cs-fixer"
@@ -31,6 +36,13 @@ let g:php_cs_fixer_dry_run = 0
 let g:php_cs_fixer_verbose = 0
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
+
+
+"-------------NCM2-------------"
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "-------------Search-----------"
 set hlsearch								"Highlight the current search
