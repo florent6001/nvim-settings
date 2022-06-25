@@ -1,5 +1,5 @@
-syntax enable
 set backspace=indent,eol,start				"Make backspace like others editor, indent, end of the line, start
+set modifiable
 
 source /home/florent/.config/nvim/Plugins.vim
 
@@ -9,6 +9,7 @@ set guifont=Fira\ Code\ Medium:h16:w57
 set number						"Activate line number
 set linespace=10					"Space between every lines (don't work on terminal)
 set t_CO=256						"Force 256 colors, useful for terminal
+set guioptions-=e					"Remove guitabs
 
 " Remove Left and Right Scrollbar
 set guioptions-=l
@@ -20,9 +21,10 @@ set guioptions-=R
 
 
 "-------------Search-----------"
-set hlsearch						"Highlight the current search
+set hlsearch								"Highlight the current search
 set incsearch
-
+let g:ctrlp_custom_ignore = 'vendor\|node_modules\|DS_Store\|git\' 	"Ignore files in ctrlP
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
 
 
@@ -33,7 +35,10 @@ map <leader>ep :e /home/florent/.config/nvim/Plugins.vim<cr>		"Edit Plugins shor
 nmap <leader><space> :nohlsearch<cr>					"Remove the search Highlight
 nmap <C-T> :NERDTreeToggle<cr>						"NerdTree
 nmap <leader>www :cd /mnt/d/boulot/www/<cr>				"Open www directory 
-nnoremap <C-P> :Telescope find_files theme=dropdown<cr>
+
+"CtrlP
+nmap <C-P> :CtrlP<cr>
+nmap <C-R> :CtrlPBufTag<cr>
 
 
 "-------------Split Management--------"
@@ -46,6 +51,10 @@ nmap <C-Down> <C-W><C-J>
 nmap <C-Up> <C-W><C-K>
 nmap <C-Left> <C-W><C-H>
 nmap <C-Right> <C-W><C-L>
+
+
+"-------------NerdTree----------------"
+let NERDTreeHijackNetrw = 0
 
 
 

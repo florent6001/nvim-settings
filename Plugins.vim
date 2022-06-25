@@ -1,4 +1,4 @@
-"-------------Plugins-----------"
+"telescope.defaults.file_ignore_patterns*-------------Plugins-----------"
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -9,11 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'dracula/vim'
 Plugin 'preservim/nerdtree'
-" Telescope Dependencies
-Plugin 'nvim-lua/plenary.nvim'
-Plugin 'BurntSushi/ripgrep'
-Plugin 'nvim-telescope/telescope.nvim'
-" Telescope End
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on
