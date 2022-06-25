@@ -20,6 +20,17 @@ set guioptions-=R
 
 
 
+"---------Php CS Fixer---------"
+let g:php_cs_fixer_path = "~/php-cs-fixer"
+let g:php_cs_fixer_level = "symfony"
+let g:php_cs_fixer_config = "default"
+let g:php_cs_fixer_rules = "@PSR2"
+let g:php_cs_fixer_php_path = "php"
+let g:php_cs_fixer_enable_default_mapping = 1
+let g:php_cs_fixer_dry_run = 0
+let g:php_cs_fixer_verbose = 0
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
 
 "-------------Search-----------"
 set hlsearch								"Highlight the current search
@@ -37,6 +48,7 @@ nmap <leader>www :cd /mnt/d/boulot/www/<cr>				"Open www directory
 
 "CtrlP
 nmap <C-P> :GFiles<cr>
+nmap <C-E> :TagbarToggle<cr>
 
 
 "-------------Split Management--------"
