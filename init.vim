@@ -24,8 +24,6 @@ set guioptions-=R
 "-------------Search-----------"
 set hlsearch								"Highlight the current search
 set incsearch
-let g:ctrlp_custom_ignore = 'vendor\|node_modules\|DS_Store\|git\' 	"Ignore files in ctrlP
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
 
 
@@ -38,8 +36,7 @@ nmap <C-T> :NERDTreeToggle<cr>						"NerdTree
 nmap <leader>www :cd /mnt/d/boulot/www/<cr>				"Open www directory 
 
 "CtrlP
-nmap <C-P> :CtrlP<cr>
-nmap <C-R> :CtrlPBufTag<cr>
+nmap <C-P> :GFiles<cr>
 
 
 "-------------Split Management--------"
